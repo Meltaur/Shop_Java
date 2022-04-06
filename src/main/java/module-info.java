@@ -3,6 +3,6 @@ module com.example.projekt_sklep {
     requires javafx.fxml;
 
 
-    opens com.example.projekt_sklep to javafx.fxml;
+    opens com.example.projekt_sklep.sites to javafx.fxml;
     exports com.example.projekt_sklep;
 }
