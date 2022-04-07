@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<?import javafx.scene.control.Button?>
-<BorderPane fx:id="mainBorderPane" fx:controller="com.example.projekt_sklep.sites.MainPageHandler" xmlns:fx="http://javafx.com/fxml">
-   <left>
-      <VBox spacing="5">
-         <Button text="btn 1" userData="/view/view_1.fxml" onAction="#handleShowView"/>
-         <Button text="btn 2" userData="/sample/view_2.fxml" onAction="#handleShowView"/>
-         <Button text="btn 3" userData="/sample/view_3.fxml" onAction="#handleShowView"/>
-      </VBox>
-   </left>
+<BorderPane prefHeight="600.0" prefWidth="1080.0" fx:id="mainBorderPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.2" fx:controller="com.example.projekt_sklep.sites.MainPageHandler">
    <center>
-      <fx:include source="view_1.fxml"/>
+      <fx:include source="shop.fxml" />
+      <fx:include source="cart.fxml" />
+      <fx:include source="news.fxml" />
    </center>
+   <top>
+      <HBox prefHeight="60.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button onAction="#handleShowView" text="Strona główna" userData="news.fxml" />
+            <Button onAction="#handleShowView" text="Sklep" userData="shop.fxml" />
+            <Button onAction="#handleShowView" text="Koszyk" userData="cart.fxml" />
+         </children>
+      </HBox>
+   </top>
 </BorderPane>
